@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Allow the client origin (set CLIENT_URL in env) and enable credentials for OAuth
-const CLIENT_URL = process.env.CLIENT_URL || process.env.VITE_CLIENT_URL || 'https://unsplash-image-search-app-ui.onrender.com';
+const CLIENT_URL = 'https://unsplash-image-search-app-ui.onrender.com';
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(morgan('dev'));
 app.use(express.json());
