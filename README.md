@@ -57,3 +57,41 @@ GET /api/search?q=nature
 
 GET /api/top-searches
 ➡️ Returns trending search keywords.
+
+MERN Image Search Application API
+
+This documentation outlines the key API endpoints for user authentication and core application functionality.
+
+The base URL for all API requests is: [Your Deployed Server URL]/api (e.g., https://unsplash-image-search-app.onrender.com/api).
+
+🔒 Authentication Endpoints
+
+These endpoints are used for user registration, login, and social sign-on via Passport.js.
+
+POST /api/auth/register
+Registers a new user with email and password.
+
+POST /api/auth/login
+Authenticates a user with email and password. Returns a JWT token upon successful login.
+
+GET /api/auth/logout
+Clears the session/cookie to log the user out.
+
+GET /api/auth/google
+Initiates the Google OAuth login flow.
+
+GET /api/auth/google/callback
+Google OAuth callback URL (handled by server).
+
+GET /api/auth/github
+Initiates the GitHub OAuth login flow.
+
+GET/api/auth/github/callback
+GitHub OAuth callback URL (handled by server).
+
+GET/api/auth/facebook
+Initiates the Facebook OAuth login flow.
+
+GET/api/auth/facebook/callback
+Facebook OAuth callback URL (handled by server).
+
