@@ -11,9 +11,12 @@ const topSearchesRoutes = require('./routes/topSearches');
 
 const app = express();
 
-const PORT = 5000;
+// Use provided PORT or default to 5000 (Render will set PORT in env)
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Allow the client origin (set CLIENT_URL in env) and enable credentials for OAuth
+const CLIENT_URL = process.env.CLIENT_URL || process.env.VITE_CLIENT_URL || 'https://unsplash-image-search-app-ui.onrender.com';
+app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(passport.initialize());

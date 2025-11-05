@@ -128,7 +128,7 @@ router.post('/logout', requireAuth, async (req, res) => {
 function sendTokenRedirect(res, user) {
   if (!process.env.JWT_SECRET) return res.status(500).json({ message: 'Server misconfigured' });
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-  const client = process.env.CLIENT_URL || process.env.VITE_CLIENT_URL || 'http://localhost:5173';
+  const client = process.env.CLIENT_URL || process.env.VITE_CLIENT_URL || 'https://unsplash-image-search-app-ui.onrender.com';
   // redirect with token in query (client should handle it)
   const url = new URL(client);
   url.searchParams.set('token', token);

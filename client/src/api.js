@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:5000';
+// Use Vite-provided server URL in production, otherwise default to the Render URL
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'https://unsplash-image-search-app.onrender.com';
 
 const api = axios.create({ baseURL: SERVER_URL });
 

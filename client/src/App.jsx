@@ -316,9 +316,9 @@ function App() {
                 <button type='button' className='btn btn-light' onClick={() => setAuthMode('signup')}>Create account</button>
               </div>
               <div style={{ marginTop: 12, display: 'flex', gap: 8, justifyContent: 'center' }}>
-                <a className='oauth-btn oauth-google' href={`${import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'}/api/auth/google`}>Sign in with Google</a>
-                <a className='oauth-btn oauth-github' href={`${import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'}/api/auth/github`}>GitHub</a>
-                <a className='oauth-btn oauth-fb' href={`${import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'}/api/auth/facebook`}>Facebook</a>
+                <a className='oauth-btn oauth-google' href={`${import.meta.env.VITE_SERVER_URL || 'https://unsplash-image-search-app.onrender.com'}/api/auth/google`}>Sign in with Google</a>
+                <a className='oauth-btn oauth-github' href={`${import.meta.env.VITE_SERVER_URL || 'https://unsplash-image-search-app.onrender.com'}/api/auth/github`}>GitHub</a>
+                <a className='oauth-btn oauth-fb' href={`${import.meta.env.VITE_SERVER_URL || 'https://unsplash-image-search-app.onrender.com'}/api/auth/facebook`}>Facebook</a>
               </div>
             </form>
           )}
